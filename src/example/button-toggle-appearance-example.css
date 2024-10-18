@@ -1,0 +1,26 @@
+mat-button-toggle-group {
+  margin-left: 12px;
+}
+
+mat-list-option {
+  margin-left: 20px;
+}
+
+mat-selection-list > div {
+  font-weight: bold;
+}
+
+.mdc-list-item.mdc-list-item--with-one-line {
+  height: auto;
+}
+
+mat-card {
+  background-color: unset;
+}
+
+button.mat-mdc-raised-button {
+  background-color: unset;
+}
+div.mdc-text-field--filled {
+  background-color: unset;
+}
