@@ -1,220 +1,87 @@
-<div style="display: flex; gap: 10px">
-  <mat-card appearance="outlined" style="max-width: 49%">
+<div style=" gap: 10px">
+  <mat-card appearance="outlined" style="margin-bottom: 20px;">
     <mat-card-header>
-      <mat-card-title>Параметры комплексной продажи</mat-card-title>
+      <mat-card-title>Код продажи</mat-card-title>
     </mat-card-header>
     <mat-card-content
-      style="margin-top: 40px; margin-left: 20px; margin-right: 20px"
+    style="margin-top: 40px; margin-left: 20px; margin-right: 20px"
     >
-      <mat-form-field style="width: 400px; margin-right: 15px">
-        <mat-label>Ответственный</mat-label>
-        <mat-select [formControl]="owners">
-          @for (owner of ownerList; track owner) {
-          <mat-option [value]="owner">{{owner}}</mat-option>
-          }
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field
-        appearance="fill"
-        style="width: 400px; margin-right: 15px"
-      >
-        <mat-label>Код 1C</mat-label>
-        <input matInput placeholder="" />
-      </mat-form-field>
-      <mat-form-field style="width: 400px; margin-right: 15px">
-        <mat-label>Заказчик</mat-label>
-        <mat-select>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-        </mat-select>
-      </mat-form-field>
       <mat-form-field style="width: 400px; margin-right: 15px">
         <mat-label>Партнер</mat-label>
         <mat-select>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
+          <mat-option [value]="1">Партнер 1</mat-option>
+          <mat-option [value]="1">Партнер 2</mat-option>
+          <mat-option [value]="1">Партнер 3</mat-option>
+          <mat-option [value]="1">Партнер 4</mat-option>
+          <mat-option [value]="1">Партнер 5</mat-option>
         </mat-select>
       </mat-form-field>
+      
       <mat-form-field style="width: 400px; margin-right: 15px">
-        <mat-label>Дистрибьютер</mat-label>
+        <mat-label>Стадия</mat-label>
         <mat-select>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
+          <mat-option [value]="1">Стадия 1</mat-option>
+          <mat-option [value]="1">Стадия 2</mat-option>
+          <mat-option [value]="1">Стадия 3</mat-option>
+          <mat-option [value]="1">Стадия 4</mat-option>
+          <mat-option [value]="1">Стадия 5</mat-option>
         </mat-select>
       </mat-form-field>
+      
       <mat-form-field style="width: 400px; margin-right: 15px">
-        <mat-label>Тип продажи</mat-label>
+        <mat-label>1. Продукт</mat-label>
         <mat-select>
-          <mat-option [value]="1">Новый</mat-option>
-          <mat-option [value]="1">Продление</mat-option>
+          <mat-option [value]="1">Продукт 1</mat-option>
+          <mat-option [value]="1">Продукт 2</mat-option>
+          <mat-option [value]="1">Продукт 3</mat-option>
+          <mat-option [value]="1">Продукт 4</mat-option>
+          <mat-option [value]="1">Продукт 5</mat-option>
         </mat-select>
       </mat-form-field>
-      <mat-form-field style="width: 400px; margin-right: 15px">
-        <mat-label>Организация</mat-label>
-        <mat-select>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-          <mat-option [value]="1">Заказчик 1</mat-option>
-        </mat-select>
-      </mat-form-field>
+      
       <mat-form-field
         appearance="fill"
         style="width: 400px; margin-right: 15px"
       >
-        <mat-label>Название проекта</mat-label>
+        <mat-label>2. Сумма price</mat-label>
         <input matInput placeholder="" />
       </mat-form-field>
       <mat-form-field
         appearance="fill"
         style="width: 400px; margin-right: 15px"
       >
-        <mat-label>Дата отгрузки</mat-label>
+        <mat-label>6. % скидки заказчика</mat-label>
         <input matInput placeholder="" />
       </mat-form-field>
       <mat-form-field
         appearance="fill"
         style="width: 400px; margin-right: 15px"
       >
-        <mat-label>Дата прихода денег</mat-label>
+        <mat-label>13. Сумма PT</mat-label>
         <input matInput placeholder="" />
       </mat-form-field>
       <mat-form-field
         appearance="fill"
         style="width: 400px; margin-right: 15px"
       >
-        <mat-label>Источник</mat-label>
+        <mat-label>14. Дата отгрузки продукции</mat-label>
         <input matInput placeholder="" />
       </mat-form-field>
       <mat-form-field
         appearance="fill"
         style="width: 400px; margin-right: 15px"
       >
-        <mat-label>Возможность</mat-label>
+        <mat-label>16. Дата поступления денежных средств</mat-label>
         <input matInput placeholder="" />
       </mat-form-field>
+    
     </mat-card-content>
   </mat-card>
-  <div style="max-width: 49%; gap: 10px; display: flex; flex-direction: column">
-    <mat-card appearance="outlined">
-      <mat-card-header>
-        <mat-card-title>Параметры калькулятора</mat-card-title>
-      </mat-card-header>
-      <!-- <button mat-icon-button style="background: transpanent; border: unset">
-        <mat-icon>close</mat-icon>
-      </button> -->
-      <mat-card-content
-        style="margin-top: 40px; margin-left: 20px; margin-right: 20px"
-      >
-        <mat-form-field
-          appearance="fill"
-          style="width: 400px; margin-right: 15px"
-        >
-          <mat-label>% скидки заказчика</mat-label>
-          <input matInput placeholder="" />
-        </mat-form-field>
-        <mat-form-field
-          appearance="fill"
-          style="width: 400px; margin-right: 15px"
-        >
-          <mat-label>% скидки партнера</mat-label>
-          <input matInput placeholder="" />
-        </mat-form-field>
-        <mat-form-field
-          appearance="fill"
-          style="width: 400px; margin-right: 15px"
-        >
-          <mat-label>% скидки дистрибьютора</mat-label>
-          <input matInput placeholder="" />
-        </mat-form-field>
-        <mat-form-field
-          appearance="fill"
-          style="width: 400px; margin-right: 15px"
-        >
-          <mat-label>% доп.скидка дистрибьютора</mat-label>
-          <input matInput placeholder="" />
-        </mat-form-field>
-      </mat-card-content>
-    </mat-card>
-    <mat-card appearance="outlined">
-      <mat-card-header>
-        <mat-card-title>Продукты</mat-card-title>
-      </mat-card-header>
-      <!-- <button mat-icon-button style="background: transpanent; border: unset">
-        <mat-icon>close</mat-icon>
-      </button> -->
-      <mat-card-content>
-        <mat-tab-group animationDuration="0ms" style="padding-right: 20px">
-          <mat-tab label="Продукты">
-            <mat-form-field
-              appearance="fill"
-              style="width: 100%; padding-top: 10px"
-            >
-              <mat-label>Поиск</mat-label>
-              <input matInput placeholder="" />
-            </mat-form-field>
-            <mat-selection-list style="padding-right: 20px">
-              <mat-list-option>
-                <span>NGFW</span>
-              </mat-list-option>
-              <mat-list-option>
-                <span matListItemTitle>MP 8</span>
-              </mat-list-option>
-              <mat-list-option>
-                <span matListItemTitle>SIEM</span>
-              </mat-list-option>
-              <mat-list-option>
-                <span matListItemTitle>MP Patrol</span>
-              </mat-list-option>
-              <mat-list-option>
-                <span matListItemTitle>MP Patrol</span>
-              </mat-list-option>
-              <mat-list-option>
-                <span matListItemTitle>MP Patrol</span>
-              </mat-list-option>
-              <mat-list-option>
-                <span matListItemTitle>MP Patrol</span>
-              </mat-list-option>
-            </mat-selection-list>
-          </mat-tab>
-          <mat-tab label="Комплексы">
-            <mat-form-field
-              appearance="fill"
-              style="width: 100%; padding-top: 10px"
-            >
-              <mat-label>Поиск</mat-label>
-              <input matInput placeholder="" />
-            </mat-form-field>
-            <mat-selection-list style="padding-right: 20px">
-              <mat-list-option>
-                <span matListItemTitle>NGFW</span>
-              </mat-list-option>
-              <mat-list-option>
-                <span matListItemTitle>MP10</span>
-              </mat-list-option>
-              <mat-list-option>
-                <span matListItemTitle>SIEM</span>
-              </mat-list-option>
-            </mat-selection-list>
-          </mat-tab>
-        </mat-tab-group>
-      </mat-card-content>
-    </mat-card>
-  </div>
-</div>
+    
 <div style="display: flex; margin-top: 10px; justify-content: end">
   <button mat-flat-button style="margin-right: 20px">Сохранить</button>
   <button mat-raised-button>Отменить</button>
+</div>
 </div>
 
 <!-- Copyright 2024 Google LLC. All Rights Reserved.
