@@ -11,6 +11,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import {inject} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatStepperModule} from '@angular/material/stepper';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 /**
  * @title Button toggle appearance
@@ -33,6 +35,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatTabsModule,
     MatStepperModule,
     MatButtonModule,
+    MatExpansionModule,
+    MatSlideToggleModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
