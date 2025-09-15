@@ -15,6 +15,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatTableModule} from '@angular/material/table';
+import { ArticleCalc } from './article-calc/article-calc';
+import { CommonModule } from '@angular/common';
 
 /**
  * @title Button toggle appearance
@@ -41,17 +43,30 @@ import {MatTableModule} from '@angular/material/table';
     MatSlideToggleModule,
     MatButtonToggleModule,
     MatTableModule,
+    ArticleCalc,
+    CommonModule
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonToggleAppearanceExample {
+  saveMode: string = 'saveSelected';
   displayedColumns: string[] = ['sale', 'product', 'oldSum', 'sum'];
+
   summaryParams: SummaryParams[] = [
     {sale: 'Продажа 1', product: 'SIEM', oldSum: '52697,000', sum: '89542,000'},
     {sale: 'Продажа 2', product: 'NGFW', oldSum: '52697,000', sum: '89542,000'},
     {sale: 'Продажа 3', product: 'NAD', oldSum: '52697,000', sum: '89542,000'},
     {sale: 'Продажа 4', product: 'Max Patrol 8', oldSum: '52697,000', sum: '89542,000'},
   ];
+
+  specCalcs: SpecCalc[] = [
+    { name: 'Расчет спецификации 1', product: 'SIEM', sum: '6985,000'},
+    { name: 'Расчет спецификации 2', product: 'SIEM', sum: '6985,000'},
+    { name: 'Расчет спецификации 3', product: 'SIEM', sum: '6985,000'},
+    { name: 'Расчет спецификации 4', product: 'SIEM', sum: '6985,000'},
+    { name: 'Расчет спецификации 5', product: 'SIEM', sum: '6985,000'},
+    { name: 'Расчет спецификации 6', product: 'SIEM', sum: '6985,000'},
+  ]
 
   /** Gets the total cost of all transactions. */
   getTotalCost() {
@@ -72,6 +87,12 @@ export interface SummaryParams {
   sale: string,
   product: string,
   oldSum: string,
+  sum: string
+}
+
+export interface SpecCalc {
+  name: string,
+  product: string,
   sum: string
 }
 

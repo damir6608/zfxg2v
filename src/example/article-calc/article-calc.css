@@ -1,0 +1,70 @@
+.ankets-data-card {
+    min-width: 50%;
+    background-color: #f0f8ff;
+  }
+  
+  .ankets-data-card-min-height {
+    min-height: 300px;
+  }
+  
+  .mat-mdc-card-header {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-family: 'Roboto';
+  }
+  
+  .ankets-data-card-table {
+    box-shadow: none;
+    padding: 15px;
+    width: 98%;
+    min-width: 98%!important;
+    overflow-x: auto;
+    table-layout: fixed;
+  }
+  
+  
+  .mat-mdc-card-header {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-family: 'Roboto';
+  }
+  
+  .ankets-data-card-element-row td {
+    border-bottom-width: 1;
+  }
+  
+  .ankets-data-card-element-detail-wrapper-expanded {
+    grid-template-rows: 1fr;
+  }
+  
+  .ankets-data-card-table-element-detail {
+    display: flex;
+    min-height: 0;
+    margin-left: 20px;
+  }
+  
+  .mat-column-parameter {
+    width: 50%;
+  }
+  
+  .mat-column-value {
+    width: auto;
+  }
+  
+  
+  tr.mat-mdc-header-row,tr.mat-mdc-footer-row {
+    background: #bfd7eb;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+
+.mat-elevation-z8 {
+    box-shadow: unset;
+  }
+  
+  .mat-mdc-table {
+    background-color: unset;
+  }

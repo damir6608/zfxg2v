@@ -91,3 +91,25 @@ div.mdc-text-field--filled {
   flex-grow: 1;
 }
 
+.pt-file-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fffdfd;
+  min-width: fit-content;
+  height: inherit;
+  padding: 15px;
+  padding-top: 5px;
+}
+
+.pt-file-name {
+  color: #333;
+  font-size: 18px;
+}
+.pt-file-name-wrapper {
+  word-wrap: break-word;
+  margin-top: 5px;
+  min-height: 40px;
+}
+
+
