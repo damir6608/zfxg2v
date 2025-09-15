@@ -75,3 +75,19 @@ div.mdc-text-field--filled {
 .mat-mdc-table {
   background-color: unset;
 }
+
+.red-strikethrough {
+  text-decoration-line: line-through;
+  text-decoration-color: red;
+}
+
+.pt-platform-header-title {
+  width: 45%;
+}
+
+.pt-platform-header-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
