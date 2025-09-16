@@ -13,7 +13,7 @@
         <div class="pt-instructions-warning-icon"></div>
         <mat-card-header class="pt-instructions-warning-header">
             <mat-card-subtitle>
-              <a [href]="" target="_blank">Инструкция по работе со спецификацией</a>
+              <a href="#" target="_blank">Инструкция по работе со спецификацией</a>
             </mat-card-subtitle>
         </mat-card-header>
       </mat-card>
@@ -27,10 +27,17 @@
           <div style="display: flex; flex-direction: column; gap: 20px; flex: 1;">
 
             <div style="display: flex; flex-direction: row;">
-              <mat-form-field floatLabel="always" class="example-form-field">
+              <mat-form-field floatLabel="always" class="example-form-field" style="width: 100%">
                 <mat-label>Название спецификации</mat-label>
                 <input matInput type="text" >
               </mat-form-field>
+            </div>
+
+            <div style="display: flex; flex-direction: row;">
+              <mat-button-toggle-group name="View" [(ngModel)]="saveMode" class="pt-button-toggle-group" aria-label="Представление" style="display: flex; width: min-content;">
+                <mat-button-toggle value="saveAll">Сохранить все</mat-button-toggle>
+                <mat-button-toggle value="saveSelected">Сохранить выбранное</mat-button-toggle>
+              </mat-button-toggle-group>
               
               <mat-slide-toggle
                 style="margin-left: 20px"
@@ -46,16 +53,9 @@
               </mat-slide-toggle>
             </div>
 
-            <div>
-              <mat-button-toggle-group name="View" [(ngModel)]="saveMode" class="pt-button-toggle-group" aria-label="Представление" style="display: flex; width: min-content;">
-                <mat-button-toggle value="saveAll">Сохранить все</mat-button-toggle>
-                <mat-button-toggle value="saveSelected">Сохранить выбранное</mat-button-toggle>
-              </mat-button-toggle-group>
-            </div>
-
           </div>
           
-          <div style="display: flex; width: 60%;">
+          <div style="display: flex; width: 50%;">
             <mat-card class="pt-grid-box-container">
               <mat-card-header style="display: flex; justify-content: center;">
                 <mat-card-title><strong>ИТОГО</strong></mat-card-title>
@@ -109,7 +109,7 @@
                 <mat-panel-title>Площадка 1</mat-panel-title>
             </div>
             <div>
-                <mat-panel-description>Сумма: 57365,874</mat-panel-description>
+                <mat-panel-description>Сумма: 57 365,84</mat-panel-description>
             </div>
             <div class="pt-platform-header-actions">
               <mat-slide-toggle
@@ -120,6 +120,57 @@
         </mat-expansion-panel-header>
         <div style="display: flex; flex-wrap: wrap; gap: 15px;"> 
           <ng-container *ngFor="let specCalc of specCalcs">
+
+            <mat-card 
+              class="pt-file-container"
+              [class.row-is-selected]="specCalc.isSelected"
+            >
+              <div class="pt-file-name-wrapper">
+                <span class="pt-file-name" >
+                  {{specCalc.name}}
+                </span>
+                
+                <mat-slide-toggle
+                  [(ngModel)]="specCalc.isSelected"
+                  style="margin-left: 5px"
+                  color="primary">
+                </mat-slide-toggle>
+              </div>
+              <div class="pt-file-info-grid-container">
+                <div class="pt-file-column-container">
+                  <div class="pt-file-column-label">
+                    <span>Продукт: {{specCalc.product}}</span>
+                  </div>
+                </div>
+                <div class="pt-file-column-container">
+                  <div class="pt-file-column-label">
+                    <span>Сумма: {{specCalc.sum}}</span>
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </ng-container>
+          
+        </div>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel (opened)="true" (closed)="false" style="margin-bottom: 15px; background-color: #f0f8ff;">
+        <mat-expansion-panel-header>
+            <div class="pt-platform-header-title">
+                <mat-panel-title>Площадка 2</mat-panel-title>
+            </div>
+            <div>
+                <mat-panel-description>Сумма: 98 685,84</mat-panel-description>
+            </div>
+            <div class="pt-platform-header-actions">
+              <mat-slide-toggle
+                style="margin-right: 10px"
+                color="primary">
+              </mat-slide-toggle>
+          </div>
+        </mat-expansion-panel-header>
+        <div style="display: flex; flex-wrap: wrap; gap: 15px;"> 
+          <ng-container *ngFor="let specCalc of specCalcs1">
 
             <mat-card 
               class="pt-file-container"

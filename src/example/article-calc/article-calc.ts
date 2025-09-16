@@ -48,9 +48,9 @@ export class ArticleCalc {
   
   specArticlesColumnsToDisplay = ['number', 'article', 'quantity', 'cost', 'tax', 'sum', 'platform', 'calculation'];
   specArticles: SpecArticle[] = [
-    { number: '1', article: 'QWE-ASD-211', quantity: '12', cost: '3214,222', tax: '436432,222', sum: '5624354,400', platform: 'Площадка 1', calculation: 'Расчет 1' },
-    { number: '2', article: 'JIA-FGH-432', quantity: '33', cost: '23425,222', tax: '785268,333', sum: '76543456,400', platform: 'Площадка 2', calculation: 'Расчет 2' },
-    { number: '3', article: 'GFT-ZXC-875', quantity: '24', cost: '523,222', tax: '36297,555', sum: '45644,400', platform: 'Площадка 3', calculation: 'Расчет 3' },
+    { number: '1', article: 'QWE-ASD-211', quantity: '12', cost: '3 214,22', tax: '436 432,22', sum: '5 624 354,40', platform: 'Площадка 1', calculation: 'Расчет 1' },
+    { number: '2', article: 'JIA-FGH-432', quantity: '33', cost: '23 425,22', tax: '785 268,33', sum: '76 543 456,40', platform: 'Площадка 2', calculation: 'Расчет 2' },
+    { number: '3', article: 'GFT-ZXC-875', quantity: '24', cost: '523,22', tax: '36 297,55', sum: '45 644,40', platform: 'Площадка 3', calculation: 'Расчет 3' },
   ];
 }
 
