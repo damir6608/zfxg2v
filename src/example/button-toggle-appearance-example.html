@@ -17,6 +17,14 @@
             </mat-card-subtitle>
         </mat-card-header>
       </mat-card>
+      
+      <mat-card appearance="outlined"class="pt-limitations-level-warning">
+        <div class="pt-limitations-level-warning-icon"></div>
+        <mat-card-header class="pt-limitations-level-warning-header">
+          
+            <mat-card-subtitle><span style="color: red;" >Внимание!</span> В заказе 1С обнаружены несколько продаж с одинаковым продуктом. При переносе сумм из спецификации будет автоматически выбрана только одна продажа.</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
       <mat-expansion-panel
         [expanded]="true"
         hideToggle
@@ -64,14 +72,30 @@
                 <!-- Item Column -->
                 <ng-container matColumnDef="sale">
                   <th mat-header-cell *matHeaderCellDef> Продажа </th>
-                  <td mat-cell *matCellDef="let summaryParam"> {{summaryParam.sale}} </td>
+                  <td mat-cell *matCellDef="let summaryParam" > 
+                    <span
+                      matBadge="!"
+                      [matBadgeOverlap]="false"
+                      matBadgeSize="small"
+                      matBadgePosition="above after"
+                      [matBadgeHidden]="validateSale(summaryParam)">
+                      {{summaryParam.sale}} 
+                    </span>
+                  </td>
                   <td mat-footer-cell *matFooterCellDef> </td>
                 </ng-container>
               
                 <!-- Cost Column -->
                 <ng-container matColumnDef="product">
                   <th mat-header-cell *matHeaderCellDef> Продукт </th>
-                  <td mat-cell *matCellDef="let summaryParam"> {{summaryParam.product}} </td>
+                  <td mat-cell *matCellDef="let summaryParam" > {{summaryParam.product}} </td>
+                  <td mat-footer-cell *matFooterCellDef>  </td>
+                </ng-container>
+              
+                <!-- Cost Column -->
+                <ng-container matColumnDef="project">
+                  <th mat-header-cell *matHeaderCellDef> Название проекта </th>
+                  <td mat-cell *matCellDef="let summaryParam"> {{summaryParam.project}} </td>
                   <td mat-footer-cell *matFooterCellDef>  </td>
                 </ng-container>
               
@@ -144,7 +168,17 @@
                 </div>
                 <div class="pt-file-column-container">
                   <div class="pt-file-column-label">
-                    <span>Сумма: {{specCalc.sum}}</span>
+                    <span>Сумма ПО: {{specCalc.sum}}</span>
+                  </div>
+                </div>
+                <div class="pt-file-column-container">
+                  <div class="pt-file-column-label">
+                    <span>{{getSpecificValue(specCalc)}}</span>
+                  </div>
+                </div>
+                <div class="pt-file-column-container">
+                  <div class="pt-file-column-label">
+                    <span>Сумма ТП: {{specCalc.sumTP}}</span>
                   </div>
                 </div>
               </div>
@@ -195,7 +229,17 @@
                 </div>
                 <div class="pt-file-column-container">
                   <div class="pt-file-column-label">
-                    <span>Сумма: {{specCalc.sum}}</span>
+                    <span>Сумма ПО: {{specCalc.sum}}</span>
+                  </div>
+                </div>
+                <div class="pt-file-column-container">
+                  <div class="pt-file-column-label">
+                    <span>{{getSpecificValue(specCalc)}}</span>
+                  </div>
+                </div>
+                <div class="pt-file-column-container">
+                  <div class="pt-file-column-label">
+                    <span>Сумма ТП: {{specCalc.sumTP}}</span>
                   </div>
                 </div>
               </div>
