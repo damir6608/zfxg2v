@@ -106,10 +106,16 @@ div.mdc-text-field--filled {
   color: #333;
   font-size: 18px;
 }
+
 .pt-file-name-wrapper {
   word-wrap: break-word;
   margin-top: 5px;
   min-height: 40px;
+}
+
+.row-is-selected {
+  font-weight: bold;
+  background-color: #d7e3ff;
 }
 
 

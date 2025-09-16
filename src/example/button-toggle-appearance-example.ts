@@ -60,18 +60,19 @@ export class ButtonToggleAppearanceExample {
   ];
 
   specCalcs: SpecCalc[] = [
-    { name: 'Расчет спецификации 1', product: 'SIEM', sum: '6985,000'},
-    { name: 'Расчет спецификации 2', product: 'SIEM', sum: '6985,000'},
-    { name: 'Расчет спецификации 3', product: 'SIEM', sum: '6985,000'},
-    { name: 'Расчет спецификации 4', product: 'SIEM', sum: '6985,000'},
-    { name: 'Расчет спецификации 5', product: 'SIEM', sum: '6985,000'},
-    { name: 'Расчет спецификации 6', product: 'SIEM', sum: '6985,000'},
+    { id: 'fe2b5aec-c5db-450c-b2ba-bd6782423d6f', name: 'Расчет спецификации 1', product: 'SIEM', sum: '6985,000', isSelected: false},
+    { id: '260e7067-53d8-4b63-bfb5-ef6def0e6f0b', name: 'Расчет спецификации 2', product: 'SIEM', sum: '6985,000', isSelected: false},
+    { id: '6e9aaf9e-1b64-45c7-bd9d-e59ddccb2d35', name: 'Расчет спецификации 3', product: 'SIEM', sum: '6985,000', isSelected: false},
+    { id: 'f64453cb-316a-4dd8-9f24-ad63c30a2480', name: 'Расчет спецификации 4', product: 'SIEM', sum: '6985,000', isSelected: false},
+    { id: '62154d1c-9705-4343-99c8-d1180315f603', name: 'Расчет спецификации 5', product: 'SIEM', sum: '6985,000', isSelected: false},
+    { id: 'a70ead1c-0517-4b63-be1a-ab2bb3c73389', name: 'Расчет спецификации 6', product: 'SIEM', sum: '6985,000', isSelected: false},
   ]
 
   /** Gets the total cost of all transactions. */
   getTotalCost() {
     return "9815687,597";
   }
+
   owners = new FormControl('');
 
   ownerList: string[] = [
@@ -91,9 +92,11 @@ export interface SummaryParams {
 }
 
 export interface SpecCalc {
+  id: string,
   name: string,
   product: string,
-  sum: string
+  sum: string,
+  isSelected: boolean
 }
 
 /**  Copyright 2024 Google LLC. All Rights Reserved.

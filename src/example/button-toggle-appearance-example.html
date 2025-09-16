@@ -121,13 +121,17 @@
         <div style="display: flex; flex-wrap: wrap; gap: 15px;"> 
           <ng-container *ngFor="let specCalc of specCalcs">
 
-            <mat-card class="pt-file-container">
+            <mat-card 
+              class="pt-file-container"
+              [class.row-is-selected]="specCalc.isSelected"
+            >
               <div class="pt-file-name-wrapper">
                 <span class="pt-file-name" >
                   {{specCalc.name}}
                 </span>
                 
                 <mat-slide-toggle
+                  [(ngModel)]="specCalc.isSelected"
                   style="margin-left: 5px"
                   color="primary">
                 </mat-slide-toggle>
